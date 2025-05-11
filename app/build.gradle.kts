@@ -57,6 +57,10 @@ dependencies {
     implementation(libs.androidx.room.ktx)
     implementation(libs.androidx.room.rxjava2)
 
+    //dagger
+    implementation(libs.dagger)
+    implementation(libs.play.services.analytics.impl)
+    kapt(libs.dagger.compiler)
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)

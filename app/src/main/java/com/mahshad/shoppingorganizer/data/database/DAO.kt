@@ -7,6 +7,7 @@ import androidx.room.OnConflictStrategy
 import androidx.room.Query
 import androidx.room.Update
 import io.reactivex.Completable
+import io.reactivex.Maybe
 import io.reactivex.Single
 
 @Dao
@@ -24,6 +25,6 @@ interface DAO {
     fun getAllUsers(): Single<List<UserEntity>>
 
     @Query("SELECT * FROM users WHERE id = :id")
-    fun getUserById(id: Int): Single<UserEntity>
+    fun getUserById(id: Int): Maybe<UserEntity>
 
 }
